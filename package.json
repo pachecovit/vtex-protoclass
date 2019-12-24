@@ -1,0 +1,9 @@
+{
+  "name": "ctz-class",
+  "version": "1.0.0",
+  "description": "Conectiza Class",
+  "main": "src/ctz-class.js",
+  "repository": "https://github.com/pachecovit/ctz-class",
+  "author": "Cleber Pacheco <cleber.pacheco@conectiza.com.br>",
+  "license": "MIT"
+}
