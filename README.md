@@ -1,1 +1,3 @@
-# ctz-class
+## Contributing
+
+- [CONTRIBUTING.md](CONTRIBUTING.md)

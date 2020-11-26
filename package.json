@@ -1,9 +1,12 @@
 {
-  "name": "ctz-class",
+  "name": "vtex-protoclass",
   "version": "1.0.0",
-  "description": "Conectiza Class",
-  "main": "src/ctz-class.js",
-  "repository": "https://github.com/pachecovit/ctz-class",
-  "author": "Cleber Pacheco <cleber.pacheco@conectiza.com.br>",
+  "description": "VTEX Proto Class",
+  "main": "src/vtex-protoclass.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pachecovit/vtex-protoclass.git"
+  },
+  "author": "Cleber Pacheco <hello@cleberpacheco.com>",
   "license": "MIT"
 }

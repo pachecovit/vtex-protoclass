@@ -3,14 +3,14 @@
  * MIT Licensed.
  */
 // Inspired by base2 and Prototype
-(function conectizaClass(){
+(function vtexProtoClass(){
   var initializing = false, fnTest = /xyz/.test(function(){xyz;}) ? /\b_super\b/ : /.*/;
 
   // The base Class implementation (does nothing)
-  window.ClassConectiza = function(){};
+  window.ProtoClassVtex = function(){};
 
   // Create a new Class that inherits from this class
-  ClassConectiza.extend = function(prop) {
+  ProtoClassVtex.extend = function(prop) {
     var _super = this.prototype;
 
     // Instantiate a base class (but only create the instance,
@@ -44,22 +44,22 @@
     }
 
     // The dummy class constructor
-    function ClassConectiza() {
+    function ProtoClassVtex() {
       // All construction is actually done in the init method
       if ( !initializing && this.init )
         this.init.apply(this, arguments);
     }
 
     // Populate our constructed prototype object
-    ClassConectiza.prototype = prototype;
+    ProtoClassVtex.prototype = prototype;
 
     // Enforce the constructor to be what we expect
-    ClassConectiza.prototype.constructor = ClassConectiza;
+    ProtoClassVtex.prototype.constructor = ProtoClassVtex;
 
     // And make this class extendable
-    ClassConectiza.extend = conectizaClass;
+    ProtoClassVtex.extend = vtexProtoClass;
 
-    return ClassConectiza;
+    return ProtoClassVtex;
   };
 })();
 
@@ -78,7 +78,7 @@ $(document).ready(function () {
 /**
  * Util
  */
-APP.core.Util = ClassConectiza.extend({
+APP.core.Util = ProtoClassVtex.extend({
   getController: function () {
     var controller = $('meta[name=controller]').attr('content');
     return controller ? controller : false;
@@ -88,7 +88,7 @@ APP.core.Util = ClassConectiza.extend({
 /**
  * Main
  */
-APP.core.Main = ClassConectiza.extend({
+APP.core.Main = ProtoClassVtex.extend({
   init: function() {
     this.start();
   },
